@@ -6,17 +6,11 @@ import org.springframework.stereotype.Service;
 import com.ssi.dao.BookDAO;
 import com.ssi.entities.Book;
 
-@Service
-public class BookService {
 
-	@Autowired
-	private BookDAO bookDAO;
+public interface BookService {
+	public Book addNewBook(Book book);
 	
-	public Book addNewBook(Book book) {
-		//it will use DAO to save book
-		bookDAO.saveBook(book);
-		return book;
-	}
+	
 	
 	
 }

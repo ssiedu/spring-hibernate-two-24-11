@@ -1,6 +1,7 @@
 package com.ssi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import com.ssi.services.BookService;
 public class BookController {
 	
 	@Autowired
+	@Qualifier("bookServiceOld")
 	private BookService bookService;
 	
 	@RequestMapping("newbook")
